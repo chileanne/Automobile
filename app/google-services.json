@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499435732204",
+    "firebase_url": "https://automobile-d6f6b.firebaseio.com",
+    "project_id": "automobile-d6f6b",
+    "storage_bucket": "automobile-d6f6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499435732204:android:2c04682e870ac8830e79c9",
+        "android_client_info": {
+          "package_name": "com.sys.cub360.automobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499435732204-mokmshj5utmgmig2l59nesc2e4jbi1m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkeBI-ssCFG1-uFqXKbxS0UybLmPgCFYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499435732204-mokmshj5utmgmig2l59nesc2e4jbi1m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

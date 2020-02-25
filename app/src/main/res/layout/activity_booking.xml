@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarapps"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AUTO MAN BOOKING"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+        android:indeterminateDrawable="@drawable/custom_progressbar"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ppsignupd"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:visibility="gone"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Spinner
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinning">
+
+        </Spinner>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Time:"/>
+
+            <TextView
+                android:id="@+id/avaialbe"
+                android:layout_marginLeft="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Space :"/>
+
+            <TextView
+                android:id="@+id/tttime"
+                android:layout_marginLeft="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price:"/>
+
+            <TextView
+                android:id="@+id/pprice"
+                android:layout_marginLeft="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+        </LinearLayout>
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="5dp"
+            android:id="@+id/clicksignind"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/color_darkgreen"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:src="@drawable/ddo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:textColor="#ffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Place Bookings"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    //no available slot ui before 5pm
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/sorryim"/>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="We are fully booked for the day,please kindly check back by 5.00pm to place a booking for the next day. Thank you"/>
+
+
+    </LinearLayout>
+
+    //no available slot ui after 5pm
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:id="@+id/llld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:src="@drawable/sorryim"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="We are fully booked for Next day,please kindly check back by 5.00pm to place a booking for the next day. Thank you"/>
+
+
+    </LinearLayout>
+
+
+    //spot was just taken ui
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:id="@+id/llll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+             <TextView
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Spot Was just taken by another,"/>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Please Kindly reopen the booking page"/>
+
+
+    </LinearLayout>
+
+
+    //payment ui
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/lkjl"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/visa"/>
+                    <ImageView
+                        android:layout_marginLeft="14dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/mastercard"/>
+                    <ImageView
+                        android:layout_marginLeft="14dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/verve"/>
+
+                </LinearLayout>
+
+        <EditText
+            android:id="@+id/tremail"
+            android:layout_marginTop="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:hint="Email to recieve prove of payment"
+            />
+
+                <EditText
+                    android:id="@+id/trname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Card Holder name"
+                    android:textSize="18sp"/>
+
+
+
+                <EditText
+                    android:id="@+id/trcardnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Card Number"
+                    android:inputType="number"
+                    android:textSize="18sp"/>
+
+
+                <EditText
+                    android:id="@+id/trcvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CVV"
+                    android:inputType="number"
+                    android:textSize="18sp"/>
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="29dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Expiry"
+                    android:textColor="#000"/>
+
+                <LinearLayout
+                    android:layout_marginLeft="19dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/trmonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="MM"
+                        android:inputType="number"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/tryr"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="YY"
+                        android:inputType="number"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/trpay"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    app:cardBackgroundColor="#e18c1f"
+                    app:cardCornerRadius="10dp">
+                    <TextView
+                        android:textColor="#ffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Make Payment"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        android:layout_gravity="center"/>
+                </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

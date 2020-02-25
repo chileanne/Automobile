@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+
+    <ProgressBar
+        android:indeterminateDrawable="@drawable/custom_progressbar"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_marginTop="235dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pppsignups"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/prml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:src="@drawable/ava"
+        android:id="@+id/insertimageview"
+        />
+
+
+
+
+
+    <TextView
+        android:text="Anthonio obe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:id="@+id/nametextview"
+        android:gravity="center"/>
+
+    <TextView
+        android:text="08138561628"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/phonetextview"
+        android:gravity="center"/>
+
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:id="@+id/editprofilebtn"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/colorAccent"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/ddo"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:textColor="#ffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vehicle_history_database.Editprofile">
+
+    <TextView
+        android:fontFamily="cursive"
+        android:padding="9dp"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginTop="129dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"/>
+
+
+    <ProgressBar
+        android:layout_marginTop="45dp"
+        android:indeterminateDrawable="@drawable/custom_progressbar"
+        android:layout_gravity="center"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ppsignin"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupllss"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:id="@+id/emsignins"/>
+
+
+        <EditText
+            android:maxEms="11"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:id="@+id/passignins"/>
+
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="12dp"
+            android:id="@+id/clicksignin"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/colorAccent"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_marginLeft="8dp"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:padding="5dp"
+                    android:textColor="#ffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"/>
+
+                <ImageView
+                    android:src="@drawable/ddo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
